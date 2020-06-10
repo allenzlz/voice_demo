@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>POC</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!--<meta http-equiv="Cache-Control"
+        content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <metaname ="screen-orientation"content="portrait">
+    <metaname ="x5-orientation"content="portrait">
+    <meta name="viewport"
+        content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;"> -->
+    <!-- 将下列文件放在本地应用并引入 -->
+    <link rel="stylesheet" type="text/css" th:href="@{/h5files/robot.css}">
+    <script type="text/javascript" th:src="@{/h5files/jquery.js}"></script>
+    <script type="text/javascript" th:src="@{/h5files/robot.js}"></script>
+    <!-- 自定义div层，用户渲染小机器人,position属性只支持relative和absolute -->
+    <!-- 启动机器人 -->
+    <script type="text/javascript">
+
+        let leftDataList = [];
+        let rightDataList = [];
+        let mediaStreamStop;
+        let jsNodeStop;
+        let mediaNodeStop;
+
+        function record() {
+            window.navigator.mediaDevices.getUserMedia({
+                audio: {
+                    sampleRate: 16000,
+                    channelCount: 2,
+                    volume: 5.0
+                }
+            }).then(mediaStream => {
+                mediaStreamStop = mediaStream;
+                beginRecord(mediaStream);
+
+            }).catch(err => {
+
+            });
+
+        }
+
+        function createJSNode(audioContext) {
+            const BUFFER_SIZE = 4096;
+            const INPUT_CHANNEL_COUNT = 2;
+            const OUTPUT_CHANNEL_COUNT = 2;
+            let creator = audioContext.createScriptProcessor || audioContext.createJavaScriptNode;
+            creator = creator.bind(audioContext);
+            return creator(BUFFER_SIZE, INPUT_CHANNEL_COUNT, OUTPUT_CHANNEL_COUNT);
+        }
+
+        function onAudioProcess(event) {
+            let audioBuffer = event.inputBuffer;
+            let leftChannelData = audioBuffer.getChannelData(0);
+            let rightChannelData = audioBuffer.getChannelData(1);
+
+            leftDataList.push(leftChannelData.slice(0));
+            rightDataList.push(rightChannelData.slice(0));
+        }
+
+        function beginRecord(mediaStream) {
+            let audioContext = new (window.AudioContext || window.webkitAudioContext);
+            let mediaNode = audioContext.createMediaStreamSource(mediaStream);
+            mediaNodeStop = mediaNode;
+            //mediaNode.connect(audioContext.destination);
+            let jsNode = createJSNode(audioContext);
+            jsNodeStop = jsNode;
+            jsNode.connect(audioContext.destination);
+            jsNode.onaudioprocess = onAudioProcess;
+            mediaNode.connect(jsNode);
+
+        }
+
+        function stopRecord() {
+            mediaStreamStop.getAudioTracks()[0].stop();
+            mediaNodeStop.disconnect();
+            jsNodeStop.disconnect();
+
+            if (leftDataList.length > 0 && rightDataList.length > 0) {
+                let leftData = mergeArray(leftDataList);
+                let rightData = mergeArray(rightDataList);
+
+                let allData = interleaveLeftAndRight(leftData, rightData);
+                let wavBuffer = createWavFile(allData);
+                playRecord(wavBuffer);
+            }
+
+        }
+
+        function mergeArray(list) {
+            let length = list.length * list[0].length;
+            let data = new Float32Array(length),
+                offset = 0;
+            for (let i = 0; i < list.length; i++) {
+                data.set(list[i], offset);
+                offset += list[i].length;
+            }
+            return data;
+        }
+
+        function interleaveLeftAndRight(left, right) {
+            let totalLength = left.length + right.length;
+            let data = new Float32Array(totalLength);
+            for (let i = 0; i < left.length; i++) {
+                let k = i * 2;
+                data[k] = left[i];
+                data[k + 1] = right[i];
+            }
+            return data;
+
+        }
+
+        function createWavFile(audioData) {
+
+            var WAV_HEAD_SIZE = 44;
+            var buffer = new ArrayBuffer(audioData.length * 2 + WAV_HEAD_SIZE),
+                // 需要用一个view来操控buffer
+                view = new DataView(buffer); // 写入wav头部信息
+            // RIFF chunk descriptor/identifier
+
+            writeUTFBytes(view, 0, 'RIFF'); // RIFF chunk length
+
+            view.setUint32(4, 44 + audioData.length * 2, true); // RIFF type
+
+            writeUTFBytes(view, 8, 'WAVE'); // format chunk identifier
+            // FMT sub-chunk
+
+            writeUTFBytes(view, 12, 'fmt '); // format chunk length
+
+            view.setUint32(16, 16, true); // sample format (raw)
+
+            view.setUint16(20, 1, true); // stereo (2 channels)
+
+            view.setUint16(22, 2, true); // sample rate
+
+            view.setUint32(24, 44100, true); // byte rate (sample rate * block align)
+
+            view.setUint32(28, 44100 * 2, true); // block align (channel count * bytes per sample)
+
+            view.setUint16(32, 2 * 2, true); // bits per sample
+
+            view.setUint16(34, 16, true); // data sub-chunk
+            // data chunk identifier
+
+            writeUTFBytes(view, 36, 'data'); // data chunk length
+
+            view.setUint32(40, audioData.length * 2, true);
+            var length = audioData.length;
+            var index = 44;
+            var volume = 5;
+
+            for (var i = 0; i < length; i++) {
+                view.setInt16(index, audioData[i] * (0x7FFF * volume), true);
+                index += 2;
+            }
+
+            return buffer;
+        }
+
+        function writeUTFBytes(view, offset, string) {
+            var lng = string.length;
+
+            for (var i = 0; i < lng; i++) {
+                view.setUint8(offset + i, string.charCodeAt(i));
+            }
+        }
+
+        //可以传到后端进行asr转写成文本
+        function playRecord(arrayBuffer) {
+            let blob = new Blob([new Uint8Array(arrayBuffer)]);
+            var formDate = new FormData();
+            formDate.append("file", blob);
+            $.ajax({
+                url: '/asr',
+                type: 'POST',
+                data: formDate,
+                contentType: false,
+                processData: false,
+                isShowLoader: true
+            }, function (resp) {
+                console.log(resp);
+                if (resp.result && resp.result == 'success') {
+                    console.log(resp.info)
+                    $ibot.showMsg(resp.info, "right");
+                }
+            });
+            // let blobUrl = URL.createObjectURL(blob);
+            // document.querySelector('.audio-node').src = blobUrl;
+            leftDataList = [];
+            rightDataList = [];
+        }
+
+        function changeRecord() {
+            var recText = $.trim($('#record').text());
+            if (recText == '开始录音') {
+                record();
+                $('#record').text('结束录音');
+            }
+            if (recText == '结束录音') {
+                stopRecord();
+                $('#record').text('开始录音');
+            }
+        }
+
+        $(function () {
+            var menuDiv = $('#h5-robot-menuDiv');
+            var robotDiv = $('#h5-robot-div');
+            var outputDiv = $('#h5-robot-outputDiv');
+            var inputDiv = $('#h5-robot-inputDiv');
+            $(window).resize(function () {
+                changeSize();
+            });
+            //苹果手机键盘显示到输入框下面
+            $('#inputBox').focus(function () {
+                window.setTimeout(function () {
+                    $(window).scrollTop(10000);
+                }, 500);
+            });
+
+            $('#inputBox').blur(function () {
+            });
+            //支持回车发送消息
+            $('#inputBox').keyup(function (e) {
+                if (e.keyCode == 13) {
+                    $ibot.sendMsg();
+                }
+            });
+
+            function changeSize() {
+                outputDiv.css('height', '100%');
+                var height = outputDiv.height();
+                outputDiv.css('height', (height - 60) + 'px');
+                robotDiv.css('height', '100%');
+                var htmlDiv = outputDiv[0];
+                htmlDiv.scrollTop = htmlDiv.scrollHeight + 2;
+            }
+
+            $ibot.run('web', '你好。。。', {
+                'robotAskUrl': 'ask.action?t=' + new Date().getTime()
+            });
+            $('#upBtn').click(function () {
+                menuDiv.slideToggle();
+                inputDiv.slideToggle();
+            });
+            $('#downBtn').click(function () {
+                menuDiv.slideToggle();
+                inputDiv.slideToggle();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+<div id="h5-robot-div">
+    <div id="h5-robot-outputDiv"></div>
+    <div id="h5-robot-menuDiv">
+        <table class="h5-bottom-table">
+            <tr>
+                <td style="width: 43px; text-align: left;">
+                    <div id="upBtn" class="boder-right" style="width: 46px;">
+                        <img th:src="@{/h5files/images/up-btn.png}"
+                             style="width: 42px; height: 43px;">
+                    </div>
+                </td>
+                <td>
+                    <div onclick="changeRecord()" style="cursor: pointer">
+                        <span id="record">开始录音</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <audio class="audio-node" autoplay></audio>
+    <div id="h5-robot-inputDiv" style="display: none">
+        <table class="h5-bottom-table">
+            <tr>
+                <td style="width: 43px; text-align: left;">
+                    <div id="downBtn" class="boder-right" style="width: 46px;">
+                        <img th:src="@{/h5files/images/down-btn.png}"
+                             style="width: 42px; height: 43px;">
+                    </div>
+                </td>
+                <td>
+                    <input id="inputBox" type="text" class="inputBox radius-box"
+                           value="" maxlength="100">
+                </td>
+                <td style="width: 60px;">
+                    <a id="sendBtn" class="radius-box" href="javascript:void(0);">发送</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

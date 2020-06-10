@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.xiaoi.exp.voice.service.AsrService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,16 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 @Slf4j
-@RestController
-public class AsrController {
-    @Autowired
-    private AsrService asrService;
-
-    @PostMapping("asr")
-    public JSONObject asr(@RequestParam("file") MultipartFile file) {
-        System.out.println(file.getSize());
-        JSONObject jsonObject = asrService.asr(file, "16k-cn");
-        System.out.println(jsonObject.toJSONString());
-        return jsonObject;
+@Controller
+public class IndexController {
+    @GetMapping("index")
+    public String index() {
+        return "index";
     }
 }
