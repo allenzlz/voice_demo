@@ -14,8 +14,12 @@
         content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;"> -->
     <!-- 将下列文件放在本地应用并引入 -->
     <link rel="stylesheet" type="text/css" th:href="@{/h5files/robot.css}">
-    <script type="text/javascript" th:src="@{/h5files/jquery.js}"></script>
+    <script type="text/javascript" th:src="@{/h5files/jquery-3.3.1.min.js}"></script>
     <script type="text/javascript" th:src="@{/h5files/robot.js}"></script>
+    <script type="text/javascript" th:src="@{/h5files/asr.js?a=1}"></script>
+    <script type="text/javascript" th:src="@{/h5files/recorder.mp3.min.js}"></script>
+    <script type="text/javascript" th:src="@{/h5files/recorder.wav.min.js}"></script>
+    <script type="text/javascript" th:src="@{/h5files/load.js}"></script>
     <!-- 自定义div层，用户渲染小机器人,position属性只支持relative和absolute -->
     <!-- 启动机器人 -->
     <script type="text/javascript">
@@ -196,11 +200,13 @@
         function changeRecord() {
             var recText = $.trim($('#record').text());
             if (recText == '开始录音') {
-                record();
+                document.querySelector('.audio-node').pause();
+                recOpen();
                 $('#record').text('结束录音');
             }
             if (recText == '结束录音') {
-                stopRecord();
+                LayerShow();
+                recStop();
                 $('#record').text('开始录音');
             }
         }
@@ -238,8 +244,8 @@
                 htmlDiv.scrollTop = htmlDiv.scrollHeight + 2;
             }
 
-            $ibot.run('web', '你好。。。', {
-                'robotAskUrl': 'ask.action?t=' + new Date().getTime()
+            $ibot.run('web', '哈喽', {
+                'robotAskUrl': 'http://gdyhsd.demo.xiaoi.com/robot/ask.action?t=' + new Date().getTime()
             });
             $('#upBtn').click(function () {
                 menuDiv.slideToggle();
