@@ -1,0 +1,216 @@
+2020-06-17 18:45:15.641  INFO 1053 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on zhenglongzhendeMacBook-Pro.local with PID 1053 (/Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo/target/classes started by zhenglongzhen in /Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo)
+2020-06-17 18:45:15.645  INFO 1053 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 18:45:16.611  INFO 1053 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 18:45:16.618  INFO 1053 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 18:45:16.619  INFO 1053 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 18:45:16.674  INFO 1053 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 18:45:16.674  INFO 1053 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 985 ms
+2020-06-17 18:45:16.800  INFO 1053 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 18:45:16.848  INFO 1053 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-17 18:45:16.955  INFO 1053 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 18:45:16.964  INFO 1053 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 1.665 seconds (JVM running for 2.504)
+2020-06-17 18:45:48.040  INFO 1053 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1590981617,1591599565,1592185101; userlogin=18515889921] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-06-17 18:45:48.045  INFO 1053 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 18:45:48.045  INFO 1053 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 18:45:48.050  INFO 1053 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-17 18:47:58.818  INFO 1137 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on zhenglongzhendeMacBook-Pro.local with PID 1137 (/Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo/target/classes started by zhenglongzhen in /Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo)
+2020-06-17 18:47:58.822  INFO 1137 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 18:47:59.776  INFO 1137 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 18:47:59.786  INFO 1137 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 18:47:59.787  INFO 1137 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 18:47:59.857  INFO 1137 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 18:47:59.857  INFO 1137 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 989 ms
+2020-06-17 18:48:00.032  INFO 1137 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 18:48:00.095  INFO 1137 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-17 18:48:00.221  WARN 1137 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-06-17 18:48:00.222  INFO 1137 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 18:48:00.225  INFO 1137 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-17 18:48:00.238  INFO 1137 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-17 18:48:00.247 ERROR 1137 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-06-17 18:49:57.836  INFO 1166 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on zhenglongzhendeMacBook-Pro.local with PID 1166 (/Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo/target/classes started by zhenglongzhen in /Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo)
+2020-06-17 18:49:57.839  INFO 1166 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 18:49:58.690  INFO 1166 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 18:49:58.698  INFO 1166 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 18:49:58.699  INFO 1166 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 18:49:58.767  INFO 1166 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 18:49:58.767  INFO 1166 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 887 ms
+2020-06-17 18:49:58.947  INFO 1166 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 18:49:59.010  INFO 1166 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-17 18:49:59.134  WARN 1166 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-06-17 18:49:59.135  INFO 1166 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 18:49:59.138  INFO 1166 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-17 18:49:59.149  INFO 1166 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-17 18:49:59.154 ERROR 1166 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-06-17 19:00:01.850  INFO 1301 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on zhenglongzhendeMacBook-Pro.local with PID 1301 (/Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo/target/classes started by zhenglongzhen in /Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo)
+2020-06-17 19:00:01.853  INFO 1301 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 19:00:02.566  INFO 1301 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 19:00:02.573  INFO 1301 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 19:00:02.574  INFO 1301 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 19:00:02.631  INFO 1301 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 19:00:02.631  INFO 1301 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 731 ms
+2020-06-17 19:00:02.749  INFO 1301 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:00:02.794  INFO 1301 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-17 19:00:02.888  WARN 1301 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-06-17 19:00:02.889  INFO 1301 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:00:02.891  INFO 1301 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-17 19:00:02.899  INFO 1301 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-17 19:00:02.903 ERROR 1301 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-06-17 19:01:25.184  INFO 1320 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on zhenglongzhendeMacBook-Pro.local with PID 1320 (/Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo/target/classes started by zhenglongzhen in /Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo)
+2020-06-17 19:01:25.187  INFO 1320 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 19:01:25.928  INFO 1320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 19:01:25.935  INFO 1320 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 19:01:25.936  INFO 1320 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 19:01:25.985  INFO 1320 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 19:01:25.986  INFO 1320 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 764 ms
+2020-06-17 19:01:26.107  INFO 1320 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:01:26.159  INFO 1320 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-17 19:01:26.306  WARN 1320 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-06-17 19:01:26.307  INFO 1320 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:01:26.310  INFO 1320 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-17 19:01:26.324  INFO 1320 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-17 19:01:26.330 ERROR 1320 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-06-17 19:02:25.743  INFO 1053 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:06:07.301  INFO 702 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on zhenglongzhendeMacBook-Pro.local with PID 702 (/Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo/target/classes started by zhenglongzhen in /Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo)
+2020-06-17 19:06:07.303  INFO 702 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 19:06:08.122  INFO 702 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 19:06:08.131  INFO 702 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 19:06:08.131  INFO 702 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 19:06:08.192  INFO 702 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 19:06:08.192  INFO 702 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 850 ms
+2020-06-17 19:06:08.359  INFO 702 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:06:08.418  INFO 702 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-17 19:06:08.533  INFO 702 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 19:06:08.544  INFO 702 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 1.652 seconds (JVM running for 3.313)
+2020-06-17 19:06:15.529  INFO 702 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1590981617,1591599565,1592185101; userlogin=18515889921] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-06-17 19:06:15.536  INFO 702 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 19:06:15.537  INFO 702 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 19:06:15.544  INFO 702 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-06-17 19:07:04.611  INFO 702 --- [http-nio-8080-exec-1] c.x.exp.voice.controller.AsrController   : 录音文件大小：95616
+2020-06-17 19:19:32.093  INFO 702 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:19:51.976  INFO 859 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on zhenglongzhendeMacBook-Pro.local with PID 859 (/Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo/target/classes started by zhenglongzhen in /Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo)
+2020-06-17 19:19:51.983  INFO 859 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 19:19:53.268  INFO 859 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 19:19:53.280  INFO 859 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 19:19:53.280  INFO 859 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 19:19:53.353  INFO 859 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 19:19:53.354  INFO 859 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1308 ms
+2020-06-17 19:19:53.530  INFO 859 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:19:53.594  INFO 859 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-17 19:19:53.729  INFO 859 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 19:19:53.742  INFO 859 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.294 seconds (JVM running for 3.176)
+2020-06-17 19:20:00.571  INFO 859 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1590981617,1591599565,1592185101; userlogin=18515889921] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-06-17 19:20:00.576  INFO 859 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 19:20:00.576  INFO 859 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 19:20:00.581  INFO 859 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-17 19:20:00.618  INFO 859 --- [http-nio-8080-exec-1] c.x.exp.voice.controller.AsrController   : 录音文件大小：19158
+2020-06-17 19:20:02.823  INFO 859 --- [http-nio-8080-exec-1] c.x.exp.voice.controller.AsrController   : 问题：笑话。
+有一天，小明带番茄西瓜和草莓上街，在一个路口，番茄被车子压了，小明说：“哈哈哈！番茄酱！”又到了一个路口，西瓜被撞了，小明说：“哈哈哈！西瓜汁！”到了第三个路口，小明被车子压死了，草莓说：“哈哈哈！人渣！”
+2020-06-17 19:20:46.463  INFO 859 --- [http-nio-8080-exec-6] c.x.exp.voice.controller.AsrController   : 录音文件大小：76502
+2020-06-17 19:20:49.470  INFO 859 --- [http-nio-8080-exec-6] c.x.exp.voice.controller.AsrController   : 问题：信用卡办理。
+信用卡可以通过信用卡地带网站、微信银行、手机银行、柜台等渠道申请。
+小智提示您：目前没有我行网点的地区，暂不支持申请哦~
+2020-06-17 19:21:50.319  INFO 859 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:22:05.029  INFO 894 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on zhenglongzhendeMacBook-Pro.local with PID 894 (/Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo/target/classes started by zhenglongzhen in /Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo)
+2020-06-17 19:22:05.032  INFO 894 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-17 19:22:05.827  INFO 894 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 19:22:05.836  INFO 894 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 19:22:05.837  INFO 894 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 19:22:05.902  INFO 894 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 19:22:05.902  INFO 894 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 825 ms
+2020-06-17 19:22:06.030  INFO 894 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:22:06.079  INFO 894 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-17 19:22:06.184  INFO 894 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 19:22:06.193  INFO 894 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 1.636 seconds (JVM running for 2.535)
+2020-06-17 19:22:20.527  INFO 894 --- [http-nio-8080-exec-2] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1590981617,1591599565,1592185101; userlogin=18515889921] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-06-17 19:22:20.527  INFO 894 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1590981617,1591599565,1592185101; userlogin=18515889921] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-06-17 19:22:20.533  INFO 894 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 19:22:20.533  INFO 894 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 19:22:20.539  INFO 894 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-17 19:22:20.583  INFO 894 --- [http-nio-8080-exec-2] c.x.exp.voice.controller.AsrController   : 录音文件大小：84694
+2020-06-17 19:22:24.305  INFO 894 --- [http-nio-8080-exec-2] c.x.exp.voice.controller.AsrController   : 问题：信用卡如何办理。
+信用卡可以通过信用卡地带网站、微信银行、手机银行、柜台等渠道申请。
+小智提示您：目前没有我行网点的地区，暂不支持申请哦~
+2020-06-17 19:23:37.115  INFO 894 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:40:17.543  INFO 1285 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on zhenglongzhendeMacBook-Pro.local with PID 1285 (started by zhenglongzhen in /Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo)
+2020-06-17 19:40:17.544  INFO 1285 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-17 19:40:18.398  INFO 1285 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:40:18.474  INFO 1285 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-17 19:40:18.656  INFO 1285 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 1.374 seconds (JVM running for 2.141)
+2020-06-17 19:40:18.913  INFO 1285 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:46:41.341  INFO 1411 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on zhenglongzhendeMacBook-Pro.local with PID 1411 (started by zhenglongzhen in /Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo)
+2020-06-17 19:46:41.342  INFO 1411 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-17 19:46:42.283  INFO 1411 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:46:42.376  INFO 1411 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-17 19:46:42.579  INFO 1411 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 1.514 seconds (JVM running for 2.345)
+2020-06-17 19:46:42.796  INFO 1411 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:49:10.143  INFO 1454 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on zhenglongzhendeMacBook-Pro.local with PID 1454 (started by zhenglongzhen in /Users/zhenglongzhen/work/workspace/idea-workspace/gdyh-wechat/voice_demo)
+2020-06-17 19:49:10.144  INFO 1454 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-17 19:49:11.081  INFO 1454 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 19:49:11.168  INFO 1454 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-17 19:49:11.376  INFO 1454 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 1.534 seconds (JVM running for 2.268)
+2020-06-17 19:49:11.579  INFO 1454 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
