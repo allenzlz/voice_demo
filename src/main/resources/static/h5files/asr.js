@@ -1,7 +1,7 @@
 function beforeUpload() {
     var voice = $('input:radio:checked').val();
     if (voice == undefined) {
-        layer.alert("请选择语音格式");
+        alert("请选择语音格式");
         return;
     }
     var ie = navigator.appName == "Microsoft Internet Explorer" ? true : false;
@@ -20,16 +20,16 @@ $(function () {
         var files = $("#fileUpload")[0].files[0];
         console.log(files)
         if (files == "") {
-            layer.alert("请上传图片");
+            alert("请上传图片");
             return false;
         }
         if (!/\.(wav|mp3|WAV|MP3)$/.test($("#fileUpload").val())) {
-            layer.alert("支持格式为.wav、.mp3");
+            alert("支持格式为.wav、.mp3");
             $("#fileUpload").val('');
             return false;
         }
         if (files.size > 5 * 1024 * 1024) {
-            layer.alert("文件不能大于5M");
+            alert("文件不能大于5M");
             $("#fileUpload").val('')
             return false;
         }
@@ -63,7 +63,7 @@ var rec, wave, recBlob;
 var recOpen = function () {//一般在显示出录音按钮或相关的录音界面时进行此方法调用，后面用户点击开始录音时就能畅通无阻了
     console.log("当前浏览器是否支持录音：" + Recorder.Support())
     if (!Recorder.Support()) {
-        layer.msg('当前浏览器不支持录音功能！', {icon: 5});
+        alert('当前浏览器不支持录音功能！', {icon: 5});
         return;
     }
     rec = null;
@@ -93,9 +93,9 @@ var recOpen = function () {//一般在显示出录音按钮或相关的录音界
         dialogCancel(); //如果开启了弹框，此处需要取消
         console.log(isUserNotAllow);
         if (isUserNotAllow) {
-            layer.msg('打开录音失败,请打开录音权限', {icon: 5});
+            alert('打开录音失败,请打开录音权限', {icon: 5});
         } else {
-            layer.msg('打开录音失败,需要HTTPS才能支持', {icon: 5});
+            alert('打开录音失败,需要HTTPS才能支持', {icon: 5});
         }
         console.log((isUserNotAllow ? "UserNotAllow，" : "") + "打开录音失败：" + msg);
 
@@ -185,6 +185,8 @@ function recStop() {
         recUpload();
     }, function (msg) {
         console.log("录音失败:" + msg, 1);
+        recClose();
+        LayerHide();
     });
 };
 
@@ -222,7 +224,7 @@ function recUpload() {
     formData.append("file", blob);
     formData.append("userid", $ibot.userId);
     $.ajax({
-        url: '/asr',
+        url: 'getAsr',
         type: 'POST',
         data: formData,
         contentType: false,
@@ -232,7 +234,7 @@ function recUpload() {
             console.log(resp);
             if (resp.result && resp.result == 'success') {
                 LayerHide();
-                $ibot.showMsg(resp.info, "right");
+                $ibot.showMsg(resp.question, "right");
                 $ibot.showMsg(resp.answer, "left");
                 document.querySelector('.audio-node').src = resp.ttsUrl + encodeURIComponent(resp.answer);
             }

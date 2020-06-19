@@ -214,3 +214,445 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2020-06-17 19:49:11.168  INFO 1454 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
 2020-06-17 19:49:11.376  INFO 1454 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 1.534 seconds (JVM running for 2.268)
 2020-06-17 19:49:11.579  INFO 1454 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 09:43:02.668  INFO 3508 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 3508 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 09:43:02.671  INFO 3508 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 09:43:04.164  INFO 3508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-18 09:43:04.177  INFO 3508 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 09:43:04.178  INFO 3508 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 09:43:04.327  INFO 3508 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 09:43:04.327  INFO 3508 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1592 ms
+2020-06-18 09:43:04.589  INFO 3508 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 09:43:04.679  INFO 3508 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 09:43:04.907  INFO 3508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-18 09:43:04.920  INFO 3508 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 3.05 seconds (JVM running for 5.566)
+2020-06-18 09:43:14.788  INFO 3508 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 09:43:14.788  INFO 3508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 09:43:14.794  INFO 3508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-18 09:43:29.566  INFO 3508 --- [http-nio-8080-exec-6] c.x.exp.voice.controller.AsrController   : 录音文件大小：92886
+2020-06-18 09:43:33.413  INFO 3508 --- [http-nio-8080-exec-6] c.x.exp.voice.controller.AsrController   : 问题：
+null
+2020-06-18 09:43:50.586  INFO 3508 --- [http-nio-8080-exec-8] c.x.exp.voice.controller.AsrController   : 录音文件大小：161152
+2020-06-18 09:43:56.432  INFO 3508 --- [http-nio-8080-exec-8] c.x.exp.voice.controller.AsrController   : 问题：你好，办理信用卡。
+信用卡可以通过信用卡地带网站、微信银行、手机银行、柜台等渠道申请。
+小智提示您：目前没有我行网点的地区，暂不支持申请哦~
+2020-06-18 15:58:50.264  INFO 21048 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 21048 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 15:58:50.307  INFO 21048 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 15:58:51.393  INFO 21048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 15:58:51.403  INFO 21048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 15:58:51.403  INFO 21048 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 15:58:51.529  INFO 21048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 15:58:51.530  INFO 21048 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1159 ms
+2020-06-18 15:58:51.721  INFO 21048 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 15:58:51.789  INFO 21048 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 15:58:51.913  INFO 21048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 15:58:51.924  INFO 21048 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.507 seconds (JVM running for 4.084)
+2020-06-18 15:59:34.355  INFO 22380 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 22380 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 15:59:34.361  INFO 22380 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 15:59:35.757  INFO 22380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 15:59:35.771  INFO 22380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 15:59:35.771  INFO 22380 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 15:59:35.938  INFO 22380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 15:59:35.939  INFO 22380 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1509 ms
+2020-06-18 15:59:36.213  INFO 22380 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 15:59:36.296  INFO 22380 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 15:59:36.430  INFO 22380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 15:59:36.443  INFO 22380 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 3.267 seconds (JVM running for 5.79)
+2020-06-18 16:00:04.107  INFO 22380 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 16:00:34.853  INFO 17912 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 17912 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 16:00:34.860  INFO 17912 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 16:00:36.206  INFO 17912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 16:00:36.220  INFO 17912 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 16:00:36.220  INFO 17912 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 16:00:36.387  INFO 17912 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 16:00:36.388  INFO 17912 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1444 ms
+2020-06-18 16:00:36.625  INFO 17912 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 16:00:36.705  INFO 17912 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 16:00:36.839  INFO 17912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 16:00:36.851  INFO 17912 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 3.034 seconds (JVM running for 4.818)
+2020-06-18 16:00:45.883  INFO 17912 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 16:00:45.883  INFO 17912 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 16:00:45.890  INFO 17912 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-06-18 16:00:45.914  INFO 17912 --- [http-nio-9999-exec-1] c.x.e.v.controller.AsrTestController     : /opt/speech_engine/fs/1.wav
+2020-06-18 16:01:00.308  INFO 17912 --- [http-nio-9999-exec-1] c.x.e.v.controller.AsrTestController     : 录音文件识别请求失败！
+2020-06-18 16:01:19.337  INFO 17912 --- [http-nio-9999-exec-3] c.x.e.v.controller.AsrTestController     : /opt/speech_engine/fs/1.wav
+2020-06-18 16:01:19.350  INFO 17912 --- [http-nio-9999-exec-3] c.x.e.v.controller.AsrTestController     : 录音文件识别请求失败！
+2020-06-18 16:02:04.207  INFO 17912 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 16:10:11.848  INFO 6500 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on jarek-feng with PID 6500 (started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 16:10:11.849  INFO 6500 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-18 16:10:13.673  INFO 6500 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 16:10:13.779  INFO 6500 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 16:10:14.167  INFO 6500 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 2.765 seconds (JVM running for 4.111)
+2020-06-18 16:10:14.639  INFO 6500 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 16:54:38.119  INFO 18568 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 18568 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 16:54:38.125  INFO 18568 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 16:54:39.356  INFO 18568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 16:54:39.367  INFO 18568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 16:54:39.368  INFO 18568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 16:54:39.510  INFO 18568 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 16:54:39.510  INFO 18568 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1302 ms
+2020-06-18 16:54:39.744  INFO 18568 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 16:54:39.825  INFO 18568 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 16:54:39.957  INFO 18568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 16:54:39.968  INFO 18568 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.827 seconds (JVM running for 4.579)
+2020-06-18 16:54:58.880  INFO 18568 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 16:54:58.880  INFO 18568 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 16:54:58.888  INFO 18568 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-06-18 16:54:59.346  INFO 18568 --- [http-nio-9999-exec-1] c.x.e.v.controller.AsrServiceController  : 录音文件识别请求成功，task_id: 63e7d609b14111ea96a78bed9e3a7ff5
+2020-06-18 16:55:35.265  INFO 18568 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 16:55:44.640  INFO 8408 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 8408 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 16:55:44.644  INFO 8408 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 16:55:45.674  INFO 8408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 16:55:45.686  INFO 8408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 16:55:45.687  INFO 8408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 16:55:45.836  INFO 8408 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 16:55:45.836  INFO 8408 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1131 ms
+2020-06-18 16:55:46.047  INFO 8408 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 16:55:46.120  INFO 8408 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 16:55:46.235  INFO 8408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 16:55:46.245  INFO 8408 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.436 seconds (JVM running for 3.999)
+2020-06-18 16:55:53.662  INFO 8408 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 16:55:53.662  INFO 8408 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 16:55:53.668  INFO 8408 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-18 16:55:54.157  INFO 8408 --- [http-nio-9999-exec-1] c.x.e.v.controller.AsrServiceController  : 录音文件识别请求成功，task_id: 84932daab14111ea96a78bed9e3a7ff5
+2020-06-18 17:12:39.270  INFO 8408 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:12:48.829  INFO 8464 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 8464 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 17:12:48.834  INFO 8464 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 17:12:49.939  INFO 8464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 17:12:49.950  INFO 8464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 17:12:49.951  INFO 8464 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 17:12:50.084  INFO 8464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 17:12:50.085  INFO 8464 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1191 ms
+2020-06-18 17:12:50.277  INFO 8464 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:12:50.347  INFO 8464 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 17:12:50.467  INFO 8464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 17:12:50.479  INFO 8464 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.487 seconds (JVM running for 4.049)
+2020-06-18 17:18:43.398  INFO 8464 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:18:53.326  INFO 18864 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 18864 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 17:18:53.330  INFO 18864 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 17:18:54.504  INFO 18864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 17:18:54.516  INFO 18864 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 17:18:54.517  INFO 18864 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 17:18:54.650  INFO 18864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 17:18:54.651  INFO 18864 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1244 ms
+2020-06-18 17:18:54.847  INFO 18864 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:18:54.914  INFO 18864 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 17:18:55.037  INFO 18864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 17:18:55.048  INFO 18864 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.67 seconds (JVM running for 4.229)
+2020-06-18 17:19:23.078  INFO 18864 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:19:28.324  INFO 5568 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 5568 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 17:19:28.329  INFO 5568 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 17:19:29.446  INFO 5568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 17:19:29.456  INFO 5568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 17:19:29.457  INFO 5568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 17:19:29.581  INFO 5568 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 17:19:29.581  INFO 5568 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1193 ms
+2020-06-18 17:19:29.775  INFO 5568 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:19:29.842  INFO 5568 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 17:19:29.957  INFO 5568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 17:19:29.968  INFO 5568 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.45 seconds (JVM running for 4.237)
+2020-06-18 17:20:04.952  INFO 5568 --- [http-nio-9999-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 17:20:04.953  INFO 5568 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 17:20:04.960  INFO 5568 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-06-18 17:21:25.816  INFO 5568 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:21:36.592  INFO 21692 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 21692 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 17:21:36.598  INFO 21692 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 17:21:37.884  INFO 21692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 17:21:37.896  INFO 21692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 17:21:37.897  INFO 21692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 17:21:38.040  INFO 21692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 17:21:38.040  INFO 21692 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1356 ms
+2020-06-18 17:21:38.272  INFO 21692 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:21:38.359  INFO 21692 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 17:21:38.502  INFO 21692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 17:21:38.515  INFO 21692 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.949 seconds (JVM running for 4.58)
+2020-06-18 17:21:57.364  INFO 21692 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 17:21:57.364  INFO 21692 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 17:21:57.370  INFO 21692 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-18 17:22:12.577  INFO 21692 --- [http-nio-9999-exec-4] c.x.exp.voice.controller.AsrController   : 录音文件大小：251264
+2020-06-18 17:22:22.064  INFO 21692 --- [http-nio-9999-exec-4] c.x.exp.voice.controller.AsrController   : 问题：你好，办理信用卡。
+信用卡可以通过信用卡地带网站、微信银行、手机银行、柜台等渠道申请。
+小智提示您：目前没有我行网点的地区，暂不支持申请哦~
+2020-06-18 17:25:34.775  INFO 21692 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:25:52.458  INFO 15400 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 15400 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 17:25:52.461  INFO 15400 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 17:25:53.343  INFO 15400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 17:25:53.352  INFO 15400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 17:25:53.352  INFO 15400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 17:25:53.465  INFO 15400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 17:25:53.465  INFO 15400 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 948 ms
+2020-06-18 17:25:53.624  INFO 15400 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:25:53.676  INFO 15400 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 17:25:53.777  INFO 15400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 17:25:53.786  INFO 15400 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 1.96 seconds (JVM running for 3.335)
+2020-06-18 17:26:14.910  INFO 15400 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 17:26:14.911  INFO 15400 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 17:26:14.915  INFO 15400 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-06-18 17:26:31.132 ERROR 15400 --- [http-nio-9999-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.StringIndexOutOfBoundsException: String index out of range: -1] with root cause
+
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1914) ~[na:1.8.0_25]
+	at com.xiaoi.exp.voice.controller.AsrServiceController.getAsr(AsrServiceController.java:39) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+
+2020-06-18 17:27:45.276  INFO 19084 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 19084 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 17:27:45.280  INFO 19084 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 17:27:46.360  INFO 19084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 17:27:46.372  INFO 19084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 17:27:46.373  INFO 19084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 17:27:46.525  INFO 19084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 17:27:46.525  INFO 19084 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1184 ms
+2020-06-18 17:27:46.765  INFO 19084 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:27:46.839  INFO 19084 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 17:27:46.969  INFO 19084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 17:27:46.981  INFO 19084 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.441 seconds (JVM running for 3.927)
+2020-06-18 17:28:06.331  INFO 19084 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 17:28:06.331  INFO 19084 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 17:28:06.336  INFO 19084 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-18 17:28:13.303  INFO 19084 --- [http-nio-9999-exec-6] c.x.e.v.controller.AsrServiceController  : ***************fileName:blob
+2020-06-18 17:28:13.315 ERROR 19084 --- [http-nio-9999-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.StringIndexOutOfBoundsException: String index out of range: -1] with root cause
+
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1914) ~[na:1.8.0_25]
+	at com.xiaoi.exp.voice.controller.AsrServiceController.getAsr(AsrServiceController.java:40) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.35.jar:9.0.35]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+
+2020-06-18 17:30:11.000  INFO 18656 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 18656 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 17:30:11.005  INFO 18656 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 17:30:12.180  INFO 18656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 17:30:12.190  INFO 18656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 17:30:12.190  INFO 18656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 17:30:12.318  INFO 18656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-18 17:30:12.319  INFO 18656 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1245 ms
+2020-06-18 17:30:12.495  INFO 18656 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:30:12.557  INFO 18656 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 17:30:12.727  INFO 18656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-06-18 17:30:12.741  INFO 18656 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.433 seconds (JVM running for 3.928)
+2020-06-18 17:30:23.895  INFO 18656 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 17:30:23.895  INFO 18656 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 17:30:23.900  INFO 18656 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-18 17:30:35.088  INFO 18656 --- [http-nio-9999-exec-7] c.x.e.v.controller.AsrServiceController  : ***************fileName:blob
+2020-06-18 17:30:35.622  INFO 18656 --- [http-nio-9999-exec-7] c.x.e.v.controller.AsrServiceController  : 录音文件识别请求成功，task_id: 5d3f549bb14611ea96a78bed9e3a7ff5
+2020-06-18 17:30:39.170  INFO 18656 --- [http-nio-9999-exec-7] c.x.e.v.controller.AsrServiceController  : *********************用一句话提问试试呦~或者看看小智找到的问题是否对您有帮助：
+1. [link]北京阳光出国卡的功能[/link]
+2. [link]北京阳光麦田理财卡的发卡对象[/link]
+3. [link]北京阳光链家理财卡的特色服务[/link]
+4. [link]北京阳光链家卡的收费优惠政策[/link]
+5. [link]北京个人速通卡（ETC）冻结金额标准[/link]
+2020-06-18 17:42:13.674  INFO 14520 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 14520 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 17:42:13.679  INFO 14520 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 17:42:15.113  INFO 14520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 17:42:15.125  INFO 14520 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 17:42:15.126  INFO 14520 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 17:42:15.293  INFO 14520 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring embedded WebApplicationContext
+2020-06-18 17:42:15.294  INFO 14520 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1541 ms
+2020-06-18 17:42:15.561  INFO 14520 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 17:42:15.647  INFO 14520 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 17:42:15.797  INFO 14520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/dev'
+2020-06-18 17:42:15.809  INFO 14520 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 3.583 seconds (JVM running for 5.551)
+2020-06-18 17:43:19.171  INFO 14520 --- [http-nio-9999-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 17:43:19.172  INFO 14520 --- [http-nio-9999-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 17:43:19.180  INFO 14520 --- [http-nio-9999-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-06-18 18:02:07.704  INFO 14520 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 18:19:03.955  INFO 10124 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on jarek-feng with PID 10124 (started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 18:19:03.996  INFO 10124 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-18 18:19:05.545  INFO 10124 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 18:19:05.684  INFO 10124 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 18:19:06.110  INFO 10124 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 2.652 seconds (JVM running for 4.078)
+2020-06-18 18:19:06.514  INFO 10124 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 18:36:25.744  INFO 7320 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on jarek-feng with PID 7320 (started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 18:36:25.746  INFO 7320 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-18 18:36:27.630  INFO 7320 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 18:36:27.776  INFO 7320 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 18:36:28.245  INFO 7320 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 2.967 seconds (JVM running for 4.466)
+2020-06-18 18:36:28.619  INFO 7320 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 18:58:54.018  INFO 1712 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 1712 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 18:58:54.029  INFO 1712 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 18:58:55.237  INFO 1712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 18:58:55.253  INFO 1712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 18:58:55.254  INFO 1712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 18:58:55.442  INFO 1712 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring embedded WebApplicationContext
+2020-06-18 18:58:55.442  INFO 1712 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1332 ms
+2020-06-18 18:58:55.663  INFO 1712 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 18:58:55.733  INFO 1712 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 18:58:55.861  INFO 1712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/dev'
+2020-06-18 18:58:55.872  INFO 1712 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.575 seconds (JVM running for 4.926)
+2020-06-18 19:18:48.069  INFO 1712 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 19:19:13.810  INFO 9316 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on jarek-feng with PID 9316 (started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 19:19:13.811  INFO 9316 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-18 19:19:15.547  INFO 9316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 19:19:15.732  INFO 9316 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 19:19:16.150  INFO 9316 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 2.781 seconds (JVM running for 4.114)
+2020-06-18 19:19:16.465  INFO 9316 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 19:45:01.220  INFO 3000 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 3000 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 19:45:01.223  INFO 3000 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 19:45:02.050  INFO 3000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 19:45:02.059  INFO 3000 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 19:45:02.059  INFO 3000 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 19:45:02.169  INFO 3000 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring embedded WebApplicationContext
+2020-06-18 19:45:02.170  INFO 3000 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 905 ms
+2020-06-18 19:45:02.323  INFO 3000 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 19:45:02.374  INFO 3000 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 19:45:02.468  INFO 3000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/dev'
+2020-06-18 19:45:02.476  INFO 3000 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 1.831 seconds (JVM running for 3.182)
+2020-06-18 19:46:34.133  INFO 3000 --- [http-nio-9999-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 19:46:34.133  INFO 3000 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 19:46:34.139  INFO 3000 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-18 19:49:55.917  INFO 11632 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 11632 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 19:49:55.921  INFO 11632 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 19:49:57.299  INFO 11632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 19:49:57.312  INFO 11632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 19:49:57.313  INFO 11632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 19:49:57.465  INFO 11632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring embedded WebApplicationContext
+2020-06-18 19:49:57.465  INFO 11632 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1462 ms
+2020-06-18 19:49:57.715  INFO 11632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 19:49:57.798  INFO 11632 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 19:49:57.948  INFO 11632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/dev'
+2020-06-18 19:49:57.961  INFO 11632 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 3.312 seconds (JVM running for 5.128)
+2020-06-18 19:50:07.493  INFO 11632 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 19:50:07.494  INFO 11632 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 19:50:07.500  INFO 11632 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-18 19:54:07.994  INFO 11632 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 19:54:17.615  INFO 18116 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Starting VoiceDemoApplication on jarek-feng with PID 18116 (D:\idea-ibotui\voice_demo\target\classes started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 19:54:17.620  INFO 18116 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : No active profile set, falling back to default profiles: default
+2020-06-18 19:54:18.666  INFO 18116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2020-06-18 19:54:18.680  INFO 18116 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-18 19:54:18.680  INFO 18116 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-18 19:54:18.819  INFO 18116 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring embedded WebApplicationContext
+2020-06-18 19:54:18.820  INFO 18116 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1141 ms
+2020-06-18 19:54:19.030  INFO 18116 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 19:54:19.100  INFO 18116 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 19:54:19.247  INFO 18116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/dev'
+2020-06-18 19:54:19.263  INFO 18116 --- [main] c.xiaoi.exp.voice.VoiceDemoApplication   : Started VoiceDemoApplication in 2.498 seconds (JVM running for 4.154)
+2020-06-18 19:54:39.000  INFO 18116 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 19:54:39.001  INFO 18116 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-18 19:54:39.008  INFO 18116 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-06-18 19:55:12.714  INFO 18116 --- [http-nio-9999-exec-8] c.x.e.v.controller.AsrServiceController  : 录音文件识别请求失败！
+2020-06-18 19:58:19.014  INFO 17720 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on jarek-feng with PID 17720 (started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 19:58:19.016  INFO 17720 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-18 19:58:20.975  INFO 17720 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 19:58:21.125  INFO 17720 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 19:58:21.572  INFO 17720 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 3.116 seconds (JVM running for 4.898)
+2020-06-18 19:58:21.959  INFO 17720 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 20:14:31.582  INFO 2752 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on jarek-feng with PID 2752 (started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 20:14:31.584  INFO 2752 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-18 20:14:33.332  INFO 2752 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 20:14:33.475  INFO 2752 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 20:14:33.898  INFO 2752 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 2.772 seconds (JVM running for 4.459)
+2020-06-18 20:14:34.325  INFO 2752 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 20:29:40.955  INFO 18116 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 20:30:28.518  INFO 19036 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on jarek-feng with PID 19036 (started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 20:30:28.521  INFO 19036 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-18 20:30:30.758  INFO 19036 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 20:30:30.960  INFO 19036 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 20:30:31.408  INFO 19036 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 3.472 seconds (JVM running for 5.244)
+2020-06-18 20:30:31.886  INFO 19036 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 20:43:49.985  INFO 18144 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on jarek-feng with PID 18144 (started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 20:43:49.989  INFO 18144 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-18 20:43:53.000  INFO 18144 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 20:43:53.154  INFO 18144 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 20:43:53.585  INFO 18144 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 4.325 seconds (JVM running for 8.169)
+2020-06-18 20:43:54.362  INFO 18144 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-18 21:00:07.108  INFO 2688 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Starting VoiceDemoApplicationTests on jarek-feng with PID 2688 (started by jarek.feng in D:\idea-ibotui\voice_demo)
+2020-06-18 21:00:07.110  INFO 2688 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : No active profile set, falling back to default profiles: default
+2020-06-18 21:00:09.148  INFO 2688 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 21:00:09.393  INFO 2688 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-18 21:00:09.847  INFO 2688 --- [main] c.x.exp.voice.VoiceDemoApplicationTests  : Started VoiceDemoApplicationTests in 3.342 seconds (JVM running for 5.203)
+2020-06-18 21:00:10.284  INFO 2688 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
