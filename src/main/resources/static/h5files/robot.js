@@ -166,8 +166,8 @@ var $ibot = {
             jsonp:'jsonp',
             url: jsonpUrl,
             success: function (data) {
-                console.log(data)
-                var html = data.result.content;
+                console.log(data.content);
+                var html = data.content;
                 _this.showMsg(html, 'left');
             },
             error: function (data) {
