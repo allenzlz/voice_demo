@@ -1,6 +1,7 @@
 package com.xiaoi.exp.voice.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.xiaoi.exp.voice.asr.FileTransRESTfulDemo;
 import com.xiaoi.exp.voice.util.AsrUtils;
@@ -62,8 +63,7 @@ public class AsrServiceController {
          * 示例：String fileLink = "https://aliyun-nls.oss-cn-hangzhou.aliyuncs.com/asr/fileASR/examples/nls-sample-16k
          * .wav";
          */
-        String fileLink = httpPath + fileName;
-
+        //String fileLink = httpPath + fileName;
         // 第一步：提交录音文件识别请求，获取任务ID用于后续的识别结果轮询
         String taskId = getTaskId(asrUrl, fileName);
         if (taskId == null) {
@@ -79,7 +79,15 @@ public class AsrServiceController {
             jsonObject.put("answer", askJson.getString("content"));
             jsonObject.put("ttsUrl", ttsUrl);
         }
-        jsonObject.put("result","success");
+        //使用完语音文件，清除本地的文件，释放磁盘
+        boolean destRealDelFlag = destReal.delete();
+        if (destRealDelFlag) {
+            log.info("*****************fileName:" + fileName + "delete success...");
+        } else {
+            log.info("*****************fileName:" + fileName + "delete failure...");
+        }
+        //返回结果
+        jsonObject.put("result", "success");
         return jsonObject;
     }
 
@@ -106,7 +114,19 @@ public class AsrServiceController {
         if (asrResult != null) {
             log.info("录音文件识别结果查询成功：" + asrResult);
             JSONObject asrObj = JSONObject.parseObject(asrResult);
-            return asrObj.getJSONArray("sentences").getJSONObject(0).getString("text");
+            if (asrObj != null) {
+                JSONArray sentencesJsonArr = asrObj.getJSONArray("sentences");
+                if (sentencesJsonArr != null && sentencesJsonArr.size() > 0) {
+                    JSONObject jsonObject0 = sentencesJsonArr.getJSONObject(0);
+                    if (jsonObject0 != null) {
+                        Object textObj = jsonObject0.get("text");
+                        if (textObj != null) {
+                            return String.valueOf(textObj);
+                        }
+                    }
+                }
+            }
+            return "录音文件识别结果为空";
         } else {
             log.info("录音文件识别结果查询失败！");
             return "录音文件识别结果查询失败！";

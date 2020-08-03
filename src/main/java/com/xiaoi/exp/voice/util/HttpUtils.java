@@ -11,6 +11,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -266,6 +267,31 @@ public class HttpUtils {
             }
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        Map<Integer,String> map=new HashMap<>();
+        map.put(1,"c");
+        map.put(2,"c++");
+        map.put(3,"java");
+
+//        for (Map.Entry<Integer, String> entry :
+//                map.entrySet()) {
+//            System.out.println(entry.getKey()+":"+entry.getValue());
+//        }
+
+        map.forEach((key,value)->{
+            System.out.println(key+":"+value);
+        });
+
+        map.forEach((key,value)->{
+            System.out.println(value);
+        });
+
+
+        map.entrySet().stream().forEach((entry)->{
+            System.out.println(entry.getKey()+":"+entry.getValue());
+        });
     }
 
 }

@@ -29,15 +29,15 @@ public class AsrController {
     public JSONObject asr(@RequestParam("file") MultipartFile file, @RequestParam("userid") String userid) {
         log.info("录音文件大小：" + file.getSize());
         JSONObject jsonObject = asrService.asr(file, "16k-cn");
-        String question = jsonObject.getString("info");
-        if (StringUtils.isNotBlank(question)) {
-            String url = askUrl + question + "&format=json&userid=" + userid;
-            String resJSON = HttpUtils.get(url);
-            JSONObject jsonb = JSONObject.parseObject(resJSON);
-            jsonObject.put("answer", jsonb.getString("content"));
-            jsonObject.put("ttsUrl", ttsUrl);
-        }
-        log.info("问题：" + jsonObject.getString("info") + "\n" + jsonObject.getString("answer"));
+//        String question = jsonObject.getString("info");
+//        if (StringUtils.isNotBlank(question)) {
+//            String url = askUrl + question + "&format=json&userid=" + userid;
+//            String resJSON = HttpUtils.get(url);
+//            JSONObject jsonb = JSONObject.parseObject(resJSON);
+//            jsonObject.put("answer", jsonb.getString("content"));
+//            jsonObject.put("ttsUrl", ttsUrl);
+//        }
+//        log.info("问题：" + jsonObject.getString("info") + "\n" + jsonObject.getString("answer"));
         return jsonObject;
     }
 }

@@ -60,7 +60,8 @@ $(function () {
 <!-- 【3】实现录音逻辑 -->
 var rec, wave, recBlob;
 /**调用open打开录音请求好录音权限**/
-var recOpen = function () {//一般在显示出录音按钮或相关的录音界面时进行此方法调用，后面用户点击开始录音时就能畅通无阻了
+var recOpen = function () {
+    //一般在显示出录音按钮或相关的录音界面时进行此方法调用，后面用户点击开始录音时就能畅通无阻了
     console.log("当前浏览器是否支持录音：" + Recorder.Support())
     if (!Recorder.Support()) {
         alert('当前浏览器不支持录音功能！', {icon: 5});
@@ -128,9 +129,9 @@ function recStart() {//打开了录音后才能进行start、stop调用
         recBlob = null;
         rec.start();
         console.log("已开始录音...");
-        var temp = 0;
+        /*var temp = 0;
         recorderTask = setInterval(function () {
-            // console.log(temp);
+            console.log("****************"+temp);
             if (temp > recorderTime - 1) {
                 recStop();
                 clearInterval(recorderTask);
@@ -142,7 +143,7 @@ function recStart() {//打开了录音后才能进行start、stop调用
                     $('.countdown-text').html("0:" + temp);
                 }
             }
-        }, 1000)
+        }, 1000)*/
     } else {
         console.log("未打开录音", 1);
     }
@@ -185,7 +186,6 @@ function recStop() {
         recUpload();
     }, function (msg) {
         console.log("录音失败:" + msg, 1);
-        recClose();
         LayerHide();
     });
 };

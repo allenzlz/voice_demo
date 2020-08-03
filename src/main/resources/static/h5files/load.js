@@ -34,5 +34,7 @@ function LayerHide() {
 
 function del() {
     var delDiv = document.getElementById("_layer_");
-    delDiv.parentNode.removeChild(delDiv);
+    if($("#_layer_").length){
+        delDiv.parentNode.removeChild(delDiv);
+    }
 }
