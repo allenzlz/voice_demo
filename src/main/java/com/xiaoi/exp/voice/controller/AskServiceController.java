@@ -14,9 +14,11 @@ public class AskServiceController {
     @Value("${ask.url}")
     private String askUrl;
 
-    public JSONObject ask(@RequestParam("userId") String userId,@RequestParam("platform") String platform,
-                          @RequestParam("question") String question){
-        String result=OkHttpUtils.get(askUrl+"?userId="+userId+"&platform="+platform+"&question="+question+"&format" +
+    public JSONObject ask(@RequestParam("userId") String userId, @RequestParam("platform") String platform,
+                          @RequestParam("question") String question) {
+        String result =
+                OkHttpUtils.get(askUrl + "?userId=" + userId + "&platform=" + platform + "&question=" + question +
+                        "&format" +
                 "=json");
         return null;
     }
