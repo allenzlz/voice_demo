@@ -34,6 +34,7 @@ var datetime = '';
 var lastDatetime = '';
 var $ibot = {
     userId: UUID(),
+    ZRG:false,
     platform: 'web',
     welcomeMsg: '你好，中国银行智能客服欢迎您',
     urlPattern1: [/\[link\s+url=[\'\"]+([^\[\]\'\"]+)[\'\"]+\s*[^\[\]]*\]([^\[\]]+)\[\/link\]/gi, '<a href="$1" target="_blank">$2</a>'],
@@ -136,7 +137,12 @@ var $ibot = {
         if (msg && msg != '') {
             this.showMsg(msg, 'right');
             this.els.inputBox.val('');
-            this.postMsg(msg);
+            if(this.ZRG){
+                send(msg);
+            }else{
+                this.postMsg(msg);
+            }
+
         }
     },
     sendCommand: function () {
@@ -168,7 +174,13 @@ var $ibot = {
             success: function (data) {
                 console.log(data.content);
                 var html = data.content;
-                _this.showMsg(html, 'left');
+                if(html=='ZRG'){
+                    _this.showMsg('已经接入人工系统', 'left');
+                    _this.ZRG=true;
+                }else{
+                    _this.showMsg(html, 'left');
+                }
+
             },
             error: function (data) {
                 _this.showMsg('与后端通讯失败，请重试', 'left');
