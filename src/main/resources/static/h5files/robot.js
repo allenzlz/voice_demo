@@ -89,6 +89,11 @@ var $ibot = {
         }
         return false;
     },
+    promptMsg:function(msg){
+        var dateDiv = $('<div class="onlineDiv radius-box"></div>');
+        this.els.outputDiv.append(dateDiv);
+        dateDiv.html(msg);
+    },
     showMsg: function (msg, pos) {
         msg = $.trim(msg);
         //自定义标签转换
@@ -100,7 +105,15 @@ var $ibot = {
         }
 
         if (pos == 'left') {
-            div = $('<div class="robot-head"><img class="robot-head-img" src="h5files/images/robot-head.png"></div><div class="small-robot-show-div small-robot-left-div"></div><div class="line-x"></div>');
+            if(msg.indexOf('#')>=0){
+                var msgArr=msg.split("#");
+                msg=msgArr[1];
+                div = $('<div class="robot-head"><img class="robot-head-img"' +
+                    ' src="h5files/images/admin.png"></div><div class="small-robot-show-div small-robot-left-div"></div><div class="line-x"></div>');
+            }else{
+                div = $('<div class="robot-head"><img class="robot-head-img" src="h5files/images/robot-head.png"></div><div class="small-robot-show-div small-robot-left-div"></div><div class="line-x"></div>');
+            }
+
         } else if (pos == 'right') {
             if (datetime != lastDatetime) {
                 var dateStr = new Date().Format('HH:mm');
@@ -138,7 +151,7 @@ var $ibot = {
             this.showMsg(msg, 'right');
             this.els.inputBox.val('');
             if(this.ZRG){
-                send(msg);
+                websocket.send(msg+"&admin");
             }else{
                 this.postMsg(msg);
             }
@@ -175,7 +188,8 @@ var $ibot = {
                 console.log(data.content);
                 var html = data.content;
                 if(html=='ZRG'){
-                    _this.showMsg('已经接入人工系统', 'left');
+                    openWebSocket();
+                    _this.promptMsg('接入人工系统成功');
                     _this.ZRG=true;
                 }else{
                     _this.showMsg(html, 'left');

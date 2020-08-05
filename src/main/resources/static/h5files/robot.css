@@ -130,6 +130,15 @@
 	text-align: center;
 	width: 50px;
 }
+.onlineDiv {
+	background-color: #A2A2A2;
+	color: #ffffff;
+	line-height: 18px;
+	margin: 5px auto;
+	padding: 2px 5px;
+	text-align: center;
+	width: 200px;
+}
 
 .small-robot-show-div {
 	padding: 9px 6px;
