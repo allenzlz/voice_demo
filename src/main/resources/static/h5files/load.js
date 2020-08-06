@@ -1,13 +1,13 @@
 function loadDiv() {
     var div = "<div id='_layer_'> <div id='_MaskLayer_' style='filter: alpha(opacity=30); -moz-opacity: 0.3; opacity: 0.3;background-color: #000; width: 100%; height: 100%; z-index: 1000; position: absolute;" +
         "left: 0; top: 0; overflow: hidden; display: none'></div><div id='_wait_' style='z-index: 1005; position: absolute; width:430px;height:218px; display: none'  ><center><h3>" +
-        "<img src='./h5files/images/load.gif' /></h3></center></div></div>";
+        "<img src='./h5files/images/mkf.png' /></h3></center></div></div>";
     return div;
 }
 
 function LayerShow() {
     var addDiv = loadDiv();
-    var element =$('body').append(addDiv);
+    var element =$('#h5-robot-outputDiv').append(addDiv);
     $(window).resize(Position);
     var deHeight = $(document).height();
     var deWidth = $(document).width();
