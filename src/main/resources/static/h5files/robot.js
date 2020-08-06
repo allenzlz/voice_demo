@@ -107,9 +107,13 @@ var $ibot = {
         if (pos == 'left') {
             if(msg.indexOf('#')>=0){
                 var msgArr=msg.split("#");
-                msg=msgArr[1];
-                div = $('<div class="robot-head"><img class="robot-head-img"' +
-                    ' src="h5files/images/admin.png"></div><div class="small-robot-show-div small-robot-left-div"></div><div class="line-x"></div>');
+                if(msgArr[0]=='admin'){
+                    msg=msgArr[1];
+                    div = $('<div class="robot-head"><img class="robot-head-img"' +
+                        ' src="h5files/images/admin.png"></div><div class="small-robot-show-div small-robot-left-div"></div><div class="line-x"></div>');
+                }else {
+                    div = $('<div class="robot-head"><img class="robot-head-img" src="h5files/images/robot-head.png"></div><div class="small-robot-show-div small-robot-left-div"></div><div class="line-x"></div>');
+                }
             }else{
                 div = $('<div class="robot-head"><img class="robot-head-img" src="h5files/images/robot-head.png"></div><div class="small-robot-show-div small-robot-left-div"></div><div class="line-x"></div>');
             }
@@ -125,7 +129,7 @@ var $ibot = {
             div = $('<div class="user-head"><img class="user-head-img" src="h5files/images/user-head.png"></div><div class="small-robot-show-div small-robot-right-div"></div><div class="line-x"></div>');
 
             // 增加xss过滤
-            msg = xssFilter(msg);
+            //msg = xssFilter(msg);
         }
         div.siblings('.small-robot-show-div').html(msg);
         //div.attr('title', new Date().Format('yyyy-MM-dd HH:mm:ss'));
@@ -139,7 +143,7 @@ var $ibot = {
         htmlDiv.scrollTop = htmlDiv.scrollHeight + 30;
 
     },
-    sendMsg: function (str) {
+    sendMsg: function (str,noShow) {
         var msg = '';
         if (str && str != '') {
             msg = str;
@@ -148,7 +152,9 @@ var $ibot = {
         }
         msg = $.trim(msg);
         if (msg && msg != '') {
-            this.showMsg(msg, 'right');
+            if(!noShow){
+                this.showMsg(msg, 'right');
+            }
             this.els.inputBox.val('');
             if(this.ZRG){
                 websocket.send(msg+"&admin");

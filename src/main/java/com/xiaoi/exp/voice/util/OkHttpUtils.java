@@ -4,6 +4,7 @@ import net.sf.json.JSONObject;
 import okhttp3.*;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
 public class OkHttpUtils {
@@ -46,6 +47,26 @@ public class OkHttpUtils {
     }
 
     /**
+     * 发送get请求获取字节流结果
+     *
+     * @param url 访问的http地址
+     * @return 返回字节流结果
+     */
+    public static InputStream getInputStream(String url) {
+        Request request = null;
+        Response response = null;
+        try {
+            request = new Request.Builder().url(url).get().build();
+            final Call call = client.newCall(request);
+            response = call.execute();
+            return response.body().byteStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
      * 发送post请求获取结果
      *
      * @param url    访问的http地址
@@ -62,7 +83,7 @@ public class OkHttpUtils {
             request = new Request.Builder().url(url).put(requestBody).build();
             final Call call = client.newCall(request);
             response = call.execute();
-            return response.body().toString();
+            return response.body().string();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -86,7 +107,7 @@ public class OkHttpUtils {
             request = new Request.Builder().url(url).put(requestBody).build();
             final Call call = client.newCall(request);
             response = call.execute();
-            return response.body().toString();
+            return response.body().string();
         } catch (IOException e) {
             e.printStackTrace();
         }

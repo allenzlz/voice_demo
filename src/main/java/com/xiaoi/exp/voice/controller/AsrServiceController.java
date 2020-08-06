@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.xiaoi.exp.voice.util.AsrUtils;
 import com.xiaoi.exp.voice.util.HttpUtils;
+import com.xiaoi.exp.voice.util.UUIDUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,7 +44,7 @@ public class AsrServiceController {
         //语音识别地址
         String asrUrl = "http://" + ip + ":" + port + "/stream/v1/filetrans";
         //语音文件名称
-        String fileName = getUUID() + ".wav";
+        String fileName = UUIDUtils.getUUID() + ".wav";
         //语音文件存放路径
         File dest = new File(filePath);
         //判断文件是否已经存在
@@ -145,13 +146,7 @@ public class AsrServiceController {
         }
     }
 
-    /**
-     * 生成32位UUID随机数
-     *
-     * @return
-     */
-    public String getUUID() {
-        return UUID.randomUUID().toString().replaceAll("-", "");
-    }
+
+
 
 }

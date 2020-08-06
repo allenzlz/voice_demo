@@ -13,7 +13,7 @@ import java.io.File;
  * @Date: 2020/3/31 18:45
  * @Description:
  */
-@Configuration
+//@Configuration
 public class WebMvcConfig extends WebMvcConfigurationSupport {
 
 //    @Override
