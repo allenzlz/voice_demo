@@ -2,11 +2,13 @@ package com.xiaoi.exp.voice.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.xiaoi.exp.voice.entity.Statement;
+import com.xiaoi.exp.voice.entity.TjBean;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public interface StatementMapper extends BaseMapper<Statement> {
@@ -16,5 +18,9 @@ public interface StatementMapper extends BaseMapper<Statement> {
 
     @Select("select count(*) from satisfaction")
     public int getCount();
+
+    @Select("select satis_results,count(*) as count,stat_key from satisfaction group by satis_results,stat_key")
+    public List<Map> getStCount();
+
 
 }

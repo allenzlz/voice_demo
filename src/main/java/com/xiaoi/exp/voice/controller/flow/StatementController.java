@@ -1,11 +1,17 @@
 package com.xiaoi.exp.voice.controller.flow;
 
+import com.xiaoi.exp.voice.entity.AiResult;
+import com.xiaoi.exp.voice.entity.Statement;
+import com.xiaoi.exp.voice.entity.TjBean;
 import com.xiaoi.exp.voice.service.StatementService;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -22,12 +28,12 @@ public class StatementController {
      * @return
      */
     @PostMapping("/init")
-    public JSONObject initRequest(@RequestParam("callphone") String callphone, @RequestParam("sessionId") String sessionId) {
+    public AiResult<String> initRequest(@RequestParam("callphone") String callphone, @RequestParam("sessionId") String sessionId) {
         return statementService.initRequest(callphone, sessionId);
     }
 
-    @PostMapping("second")
-    public JSONObject secondRequest(@RequestParam("callphone") String callphone, @RequestParam("sessionId") String sessionId, @RequestParam("satisResults") String satisResults) {
+    @PostMapping("/second")
+    public AiResult<String> secondRequest(@RequestParam("callphone") String callphone, @RequestParam("sessionId") String sessionId, @RequestParam("satisResults") String satisResults) {
         return statementService.updateInitRequest(callphone, sessionId, satisResults);
     }
 
@@ -36,8 +42,8 @@ public class StatementController {
      *
      * @return
      */
-    @RequestMapping(value = "list", method = RequestMethod.GET)
-    public JSONObject getList(@RequestParam("page") int page, @RequestParam("limit") int limit) {
+    @GetMapping("/list")
+    public AiResult<List<Statement>> getList(@RequestParam("page") int page, @RequestParam("limit") int limit) {
         return statementService.getList(page, limit);
     }
 
@@ -49,5 +55,25 @@ public class StatementController {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("st");
         return mv;
+    }
+
+    /**
+     * 统计跳转
+     */
+    @GetMapping("/tj")
+    public ModelAndView tj() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("tj");
+        return mv;
+    }
+
+    @GetMapping("/tjList")
+    public AiResult<List<TjBean>> tjList() {
+        return statementService.getTjResult();
+    }
+
+    @GetMapping("/all")
+    public AiResult<List<Statement>> getAll() {
+        return new AiResult<>(0, "123", statementService.getAll(), 13);
     }
 }

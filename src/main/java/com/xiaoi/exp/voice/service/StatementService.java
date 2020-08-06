@@ -3,16 +3,22 @@ package com.xiaoi.exp.voice.service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.eastrobot.robotdev.cache.Cache;
+import com.xiaoi.exp.voice.entity.AiResult;
 import com.xiaoi.exp.voice.entity.Statement;
+import com.xiaoi.exp.voice.entity.TjBean;
 import com.xiaoi.exp.voice.mapper.StatementMapper;
 import lombok.extern.slf4j.Slf4j;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Wrapper;
+import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @Service
@@ -21,7 +27,11 @@ public class StatementService {
     @Autowired
     private StatementMapper statementMapper;
 
-    public JSONObject initRequest(String callphone, String sessionId) {
+    public List<Statement> getAll() {
+        return statementMapper.selectList(null);
+    }
+
+    public AiResult<String> initRequest(String callphone, String sessionId) {
         int code = 1;
         String message = "succ";
         String data = "";
@@ -31,6 +41,7 @@ public class StatementService {
             st.setSessionId(sessionId);
             st.setCallPhone(callphone);
             st.setCreateTime(new Date());
+            st.setStatKey(new Date());
             st.setSatisResults("-");//请求进来暂时记录"-"，如正常结束调查，调换"-"为真实的结果
             int insert = statementMapper.insert(st);
             log.info("初始化请求->插入数据：result=" + insert);
@@ -39,11 +50,11 @@ public class StatementService {
             code = -1;
             message = e.getMessage();
         } finally {
-            return getResp(code, message, data);
+            return new AiResult<>(code, message, data);
         }
     }
 
-    public JSONObject updateInitRequest(String callphone, String sessionId, String satisResults) {
+    public AiResult<String> updateInitRequest(String callphone, String sessionId, String satisResults) {
         int code = 1;
         String message = "succ";
         String data = "";
@@ -52,6 +63,7 @@ public class StatementService {
             if (o != null) {
                 Statement st = new Statement();
                 st.setCreateTime(new Date());
+                st.setStatKey(new Date());
                 st.setSatisResults(satisResults);
                 UpdateWrapper<Statement> uw = new UpdateWrapper<Statement>();
                 uw.eq("session_id", sessionId);
@@ -67,11 +79,11 @@ public class StatementService {
             code = -1;
             message = e.getMessage();
         } finally {
-            return getResp(code, message, data);
+            return new AiResult<>(code, message, data);
         }
     }
 
-    public JSONObject getList(int page, int limit) {
+    public AiResult<List<Statement>> getList(int page, int limit) {
         try {
             int start = 0;
             page = page - 1;
@@ -79,27 +91,79 @@ public class StatementService {
                 page = 0;
             }
             start = page * limit;
-            return getResp(0, "succ", statementMapper.getList(start, limit), statementMapper.selectCount(null));
+            List<Statement> statements = statementMapper.selectList(null);
+            log.info(statements.get(0).getCreateTime().toString());
+            return new AiResult<>(0, "succ", statementMapper.getList(start, limit), statementMapper.selectCount(null));
         } catch (Exception e) {
             e.printStackTrace();
-            return getResp(0, "failed", null);
+            return new AiResult<>(-1, "failed", null, 0);
         }
     }
 
-    private JSONObject getResp(int code, String message, Object data) {
-        JSONObject json = new JSONObject();
-        json.put("code", code);
-        json.put("message", message);
-        json.put("data", data);
-        return json;
+    public AiResult<List<TjBean>> getTjResult() {
+        List<TjBean> tjList = new ArrayList<>();
+        try {
+            NumberFormat numberFormat = NumberFormat.getInstance();
+            numberFormat.setMaximumFractionDigits(2);
+            List<Map> stCount = statementMapper.getStCount();
+            TjBean tj = new TjBean();
+            for (Map<Object, Object> map : stCount) {
+                tj.setStatKey(map.get("stat_key").toString());
+                String satis_results = map.get("satis_results").toString();
+                String stcount = map.get("count").toString();
+                if ("1".equals(satis_results)) {
+                    tj.setMy1(stcount);
+                }
+                if ("2".equals(satis_results)) {
+                    tj.setMy2(stcount);
+                }
+                if ("3".equals(satis_results)) {
+                    tj.setMy3(stcount);
+                }
+                if ("4".equals(satis_results)) {
+                    tj.setMy4(stcount);
+                }
+                if ("-".equals(satis_results)) {
+                    tj.setMy5(stcount);
+                }
+                int count = statementMapper.selectCount(null);
+                tj.setCount(count);//总数
+
+                QueryWrapper<Statement> qw = new QueryWrapper<>();
+                qw.ne("satis_results", "-");
+                int fcount = statementMapper.selectCount(qw);
+                tj.setFcount(fcount);//调查总数
+                tj.setDczb(numberFormat.format((float) fcount / (float) count * 100) + "%");//调查完整的占比
+
+                QueryWrapper<Statement> qw2 = new QueryWrapper<>();
+                qw2.ne("satis_results", "-");
+                qw2.ne("satis_results", "4");
+                int mycount = statementMapper.selectCount(qw2);//满意度占比
+                tj.setMydzb(numberFormat.format((float) mycount / (float) fcount * 100) + "%");
+
+            }
+            tjList.add(tj);
+        } catch (Exception e) {
+            e.printStackTrace();
+            tjList = null;
+        } finally {
+            return new AiResult<>(0, "succc", tjList, 0);
+        }
     }
 
-    private JSONObject getResp(int code, String message, Object data, int count) {
-        JSONObject json = new JSONObject();
-        json.put("code", code);
-        json.put("message", message);
-        json.put("data", data);
-        json.put("count", count);
-        return json;
+    public static void main(String[] args) {
+        int num1 = 7;
+
+        int num2 = 9;
+
+// 创建一个bai数值格式化du对象
+
+        NumberFormat numberFormat = NumberFormat.getInstance();
+        numberFormat.setMaximumFractionDigits(2);
+
+        String result = numberFormat.format((float) num1 / (float) num2 * 100);
+
+        System.out.println("num1和num2的百zhi分比为:" + result + "%");
     }
+
 }
