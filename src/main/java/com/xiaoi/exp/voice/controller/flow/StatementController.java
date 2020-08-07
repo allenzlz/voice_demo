@@ -69,7 +69,7 @@ public class StatementController {
 
     @GetMapping("/tjList")
     public AiResult<List<TjBean>> tjList() {
-        return statementService.getTjResult();
+        return statementService.getTj();
     }
 
     @GetMapping("/all")

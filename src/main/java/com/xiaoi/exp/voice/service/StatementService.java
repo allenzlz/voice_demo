@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Wrapper;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -146,6 +147,65 @@ public class StatementService {
         } catch (Exception e) {
             e.printStackTrace();
             tjList = null;
+        } finally {
+            return new AiResult<>(0, "succc", tjList, 0);
+        }
+    }
+
+    public AiResult<List<TjBean>> getTj() {
+        List<TjBean> tjList = new ArrayList<>();
+        try {
+            List<Statement> listByGourpByDate = statementMapper.getListByGourpByDate();
+            for (Statement st : listByGourpByDate) {
+                TjBean tj = new TjBean();
+                Date statKey = st.getStatKey();
+                String statKeyStr = new SimpleDateFormat("yyyy-MM-dd").format(statKey);
+                tj.setStatKey(statKeyStr);
+                List<Map> listByGourpBySatisResults = statementMapper.getListByGourpBySatisResults(statKeyStr);
+                for (Map map : listByGourpBySatisResults) {
+                    String satis_results = map.get("satis_results").toString();
+                    String stcount = map.get("count").toString();
+                    if ("1".equals(satis_results)) {
+                        tj.setMy1(stcount);
+                    }
+                    if ("2".equals(satis_results)) {
+                        tj.setMy2(stcount);
+                    }
+                    if ("3".equals(satis_results)) {
+                        tj.setMy3(stcount);
+                    }
+                    if ("4".equals(satis_results)) {
+                        tj.setMy4(stcount);
+                    }
+                    if ("-".equals(satis_results)) {
+                        tj.setMy5(stcount);
+                    }
+                }
+                QueryWrapper<Statement> qw3 = new QueryWrapper<>();
+                qw3.eq("stat_key", statKeyStr);
+                int count = statementMapper.selectCount(qw3);
+                tj.setCount(count);//总数
+
+                NumberFormat numberFormat = NumberFormat.getInstance();
+                numberFormat.setMaximumFractionDigits(2);
+                QueryWrapper<Statement> qw = new QueryWrapper<>();
+                qw.ne("satis_results", "-");
+                qw.eq("stat_key", statKeyStr);
+                int fcount = statementMapper.selectCount(qw);
+                tj.setFcount(fcount);//调查总数
+                tj.setDczb(numberFormat.format((float) fcount / (float) count * 100) + "%");//调查完整的占比
+
+                QueryWrapper<Statement> qw2 = new QueryWrapper<>();
+                qw2.ne("satis_results", "-");
+                qw2.ne("satis_results", "4");
+                qw2.eq("stat_key", statKeyStr);
+                int mycount = statementMapper.selectCount(qw2);//满意度占比
+                tj.setMydzb(numberFormat.format((float) mycount / (float) fcount * 100) + "%");
+
+                tjList.add(tj);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
             return new AiResult<>(0, "succc", tjList, 0);
         }

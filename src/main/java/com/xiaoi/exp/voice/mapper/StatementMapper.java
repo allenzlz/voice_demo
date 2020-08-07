@@ -22,5 +22,9 @@ public interface StatementMapper extends BaseMapper<Statement> {
     @Select("select satis_results,count(*) as count,stat_key from satisfaction group by satis_results,stat_key")
     public List<Map> getStCount();
 
+    @Select("select stat_key from satisfaction group by stat_key order by stat_key desc")
+    public List<Statement> getListByGourpByDate();
 
+    @Select("select satis_results,count(*) as count from satisfaction where stat_key = #{stat_key}  group by satis_results")
+    public List<Map> getListByGourpBySatisResults(String stat_key);
 }
